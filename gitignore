@@ -1,0 +1,30 @@
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Data files (optional: include if large or sensitive)
+*.csv
+*.tsv
+*.xls
+*.xlsx
+*.pkl
+*.h5
+*.feather
+*.parquet
+
+# Environment files
+.env
+.venv/
+*.env
+
+# VS Code and other IDE settings
+.vscode/
+.idea/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
