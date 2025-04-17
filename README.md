@@ -1,39 +1,80 @@
 # Quantitative Stock Models: Beating the S&P 500
 
-This project explores multiple quantitative modeling techniques to identify stock selections that outperform the S&P 500 benchmark. The analysis focuses on evaluating data from 2022 to predict performance in 2023 using a combination of regression, clustering, and Bayesian methods.
+## Overview
+This project explores quantitative strategies—Linear Regression, K-Means Clustering, and Bayesian Inference—to select stocks and construct portfolios aimed at outperforming the S&P 500 index. Historical stock and financial data from 2022 was analyzed to predict and optimize investment outcomes for 2023, achieving significant market outperformance.
 
-## Project Goal
+## Objectives
+- **Primary Goal**: Develop quantitative investment strategies that reliably outperform the S&P 500 benchmark.
+- **Model Comparison**: Evaluate Linear Regression, K-Means Clustering, and Bayesian methods based on predictive accuracy and portfolio returns.
+- **Strategic Insight**: Provide actionable insights into stock categorization and strategic portfolio allocation.
 
-To classify and select a portfolio of stocks that beats the S&P 500 index, achieving over 17% relative outperformance through rigorous quantitative analysis.
 
-## Models Used
+## Modeling Approaches
 
-- **Linear Regression**
-  - Used as a baseline predictive model for price movement.
-  - Found limited predictive power due to noisy stock features.
+### Linear Regression
+- **Purpose**: Baseline predictive model identifying stock price drivers.
+- **Features**: Financial ratios (EPS, revenue growth, ROE, dividend yield).
+- **Portfolio Strategy**: Allocated 70% to Growth stocks, 20% Value stocks, 10% Income stocks.
 
-- **K-Means Clustering**
-  - Grouped stocks based on financial and technical characteristics.
-  - Helped in segmenting investment-worthy clusters.
+### K-Means Clustering
+- **Purpose**: Unsupervised approach identifying natural groupings of stocks based on financial indicators.
+- **Metrics**: Silhouette Score used to ensure clustering quality.
+- **Portfolio Strategy**: Same allocation strategy emphasizing Growth stocks.
 
-- **Bayesian Inference**
-  - Incorporated uncertainty into predictions.
-  - Demonstrated robust performance with probabilistic confidence intervals.
+### Bayesian Inference
+- **Purpose**: Leveraged probabilistic modeling to integrate prior knowledge and handle uncertainty dynamically.
+- **Methodology**: Bayesian regression using priors informed by Linear Regression results.
+- **Challenges**: High computational demands and lower practical returns, highlighting need for optimization.
 
-## Key Features and Insights
 
-- Focused on stock data post-2018, filtering out sparse short-interest periods.
-- Subset includes only the 2022 training period to predict 2023 outcomes.
-- Evaluated model outcomes relative to S&P 500 benchmark performance.
+## Results Summary
+
+| Model                | Annual Return (2023) | Outperformed S&P 500 (26.71%)? | Key Observations                 |
+|----------------------|----------------------|--------------------------------|----------------------------------|
+| **Linear Regression**| **44.43%** 🚀        | ✅ Yes                         | Highest predictive accuracy      |
+| **K-Means Clustering**| 31.49% 📈           | ✅ Yes                         | Effective clustering; strong but lower returns |
+| **Bayesian Inference**| 0.77% 📉            | ❌ No                          | Computationally demanding; underperformed |
+
+### Key Takeaways:
+- Linear Regression clearly outperformed, delivering highest returns with good predictive accuracy.
+- K-Means offered solid but comparatively lower performance.
+- Bayesian Inference needs computational refinement but remains promising for risk-aware strategies.
+
+## Limitations and Future Directions
+- **Computational Efficiency**: Bayesian approach requires optimization for real-time use.
+- **Feature Selection**: Expanding and refining financial data features could further enhance model accuracy.
+- **Hybrid Models**: Exploring combinations of these models may yield superior investment strategies.
+
+## Conclusion
+This project demonstrates the significant potential of quantitative strategies for outperforming traditional passive investment benchmarks like the S&P 500. Among the tested models, Linear Regression offered the strongest immediate returns, while Bayesian methods offer promising avenues for future enhancement with their inherent adaptability and uncertainty quantification.
+
+This structured, comparative approach provides clear actionable insights for investors, emphasizing how systematic modeling can significantly enhance portfolio performance.
+
+## 🧮 Bayesian Inference Primer
+Bayesian inference models uncertainty explicitly through probability distributions:
+
+p(w \mid D) \propto p(D \mid w) \cdot p(w)
+
+- **p(w)**: Prior distribution based on Linear Regression insights.
+- **p(D | w)**: Likelihood based on observed financial data.
+- **p(w | D)**: Posterior distribution offering dynamic stock selection and risk-aware decision-making.
+
+The model optimizes an **Evidence Lower Bound (ELBO)** using variational inference to approximate complex posterior distributions.
+
+## ✒Author
+**John Grier**  
+MS Data Science Candidate, Illinois Tech  
+[GitHub: J-Grier](https://github.com/J-Grier)
+
+## References
+- Yahoo Finance historical data
+- Zhao Gao, \"The application of artificial intelligence in stock investment\" (2020)
+- Wikipedia: [S&P 500 Tickers](https://en.wikipedia.org/wiki/List_of_S%26P_500_companies)
+
 
 ## Project Structure
 
 quantitative-stock-models/ ├── cleaned_QuantitativeModels.ipynb # Main notebook with all analysis ├── README.md # Project overview and instructions ├── requirements.txt # Environment dependencies ├── data/ # (Optional) Include small public data or add link └── images/ # Charts and visualizations
-
-## Results
-
-- The final model-based portfolio **outperformed the S&P 500 by over 17%** in backtesting.
-- Bayesian methods offered the best balance of performance and explainability.
 
 ## Requirements
 
@@ -47,9 +88,3 @@ git clone https://github.com/J-Grier/quantitative-stock-models.git
 
 # Create environment and install dependencies
 pip install -r requirements.txt
-
-## Author
-
-**John Grier**  
-MS Data Science Candidate, Illinois Tech  
-[GitHub: J-Grier](https://github.com/J-Grier)
