@@ -50,7 +50,7 @@ This project demonstrates the significant potential of quantitative strategies f
 
 This structured, comparative approach provides clear actionable insights for investors, emphasizing how systematic modeling can significantly enhance portfolio performance.
 
-## 🧮 Bayesian Inference Primer
+## Bayesian Inference Primer
 Bayesian inference models uncertainty explicitly through probability distributions:
 
 p(w \mid D) \propto p(D \mid w) \cdot p(w)
@@ -61,7 +61,7 @@ p(w \mid D) \propto p(D \mid w) \cdot p(w)
 
 The model optimizes an **Evidence Lower Bound (ELBO)** using variational inference to approximate complex posterior distributions.
 
-## ✒Author
+## Author
 **John Grier**  
 MS Data Science Candidate, Illinois Tech  
 [GitHub: J-Grier](https://github.com/J-Grier)
