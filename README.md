@@ -61,6 +61,25 @@ p(w \mid D) \propto p(D \mid w) \cdot p(w)
 
 The model optimizes an **Evidence Lower Bound (ELBO)** using variational inference to approximate complex posterior distributions.
 
+## Macro Economic Scenario Allocations
+
+![Portfolio Allocations by Scenario](scenario_allocations.png)
+
+This visualization clearly demonstrates how portfolio allocations shift dynamically under different macroeconomic scenarios (Base Case, Recession, Expansion).
+
+-**Dynamic Scenario Toggles**: Adjust classifications and allocations based on economic assumptions (interest rates, volatility).
+
+-**Strategic Reallocation**: Highlights explicit changes in growth-oriented, value-oriented, and income-oriented strategies depending on scenario.
+
+-**Enhanced Model Flexibility**: Shows how model-driven stock selection adapts realistically, improving portfolio robustness across market cycles.
+
+## 🚀 Recent Updates & Enhancements:
+- Implemented explicit scenario toggling to simulate varying market conditions.
+
+- Dynamically adjusted stock-classification thresholds and allocations.
+
+- Integrated clear visualizations to enhance interpretability and demonstrate strategic flexibility.
+
 ## Author
 **John Grier**  
 MS Data Science Candidate, Illinois Tech  
