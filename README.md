@@ -1,5 +1,24 @@
 # Quantitative Stock Models: Beating the S&P 500
 
+## 📖 Quick Links
+- [Overview](#overview)
+- [Objectives](#objectives)
+- [Modeling Approaches](#modeling-approaches)
+- [Results Summary](#results-summary)
+- [Supplemental Analysis: Macroeconomic Scenario-Based Portfolio Allocation (Newly Added!)](#supplemental-analysis-macroeconomic-scenario-based-portfolio-allocation-newly-added)
+- [Key Takeaways](#key-takeaways)
+- [Key Insights from Scenario Analysis](#key-insights-from-scenario-analysis)
+- [Strategic Implications](#strategic-implications)
+- [Limitations and Future Directions](#limitations-and-future-directions)
+- [Conclusion](#conclusion)
+- [Bayesian Inference Primer](#bayesian-inference-primer)
+- [Macro Economic Scenario Allocations](#macro-economic-scenario-allocations)
+- [🚀 Recent Updates & Enhancements](#-recent-updates--enhancements)
+- [Author](#author)
+- [References](#references)
+- [Project Structure](#project-structure)
+- [Requirements](#requirements)
+
 ## Overview
 This project explores quantitative strategies—Linear Regression, K-Means Clustering, and Bayesian Inference—to select stocks and construct portfolios aimed at outperforming the S&P 500 index. Historical stock and financial data from 2022 was analyzed to predict and optimize investment outcomes for 2023, achieving significant market outperformance.
 
@@ -35,20 +54,54 @@ This project explores quantitative strategies—Linear Regression, K-Means Clust
 | **K-Means Clustering**| 31.49% 📈           | ✅ Yes                         | Effective clustering; strong but lower returns |
 | **Bayesian Inference**| 0.77% 📉            | ❌ No                          | Computationally demanding; underperformed |
 
+## Supplemental Analysis: Macroeconomic Scenario-Based Portfolio Allocation (Newly Added!)
+
+In addition to our original quantitative models, we conducted an explicit scenario-based portfolio analysis to assess investment performance under different macroeconomic conditions (Base Case, Recession, Expansion). This supplemental analysis demonstrates how strategically adjusting allocations based on economic indicators can enhance returns and improve portfolio resilience.
+
+### Supplemental Results (Macroeconomic Scenario Analysis - 2023)
+
+| Economic Scenario | Portfolio Return | Final Portfolio Value (from $10M) | Outperformed S&P 500 (26.71%)? |
+|-------------------|------------------|-----------------------------------|--------------------------------|
+| **Recession**     | 28.33% 📈        | $12,832,768.71                    | ✅ Yes                         |
+| **Base Case**     | 44.43% 🚀        | $14,443,489.52                    | ✅ Yes                         |
+| **Expansion**     | 52.03% 🚀        | $15,203,148.33                    | ✅ Yes                         |
+
+### Benchmark Performance (S&P 500 - SPY)
+
+| Benchmark | Return | Final Value (from $10M) |
+|-----------|--------|--------------------------|
+| **SPY**   | 26.71% | $12,670,922.43           |
+
 ### Key Takeaways:
 - Linear Regression clearly outperformed, delivering highest returns with good predictive accuracy.
 - K-Means offered solid but comparatively lower performance.
 - Bayesian Inference needs computational refinement but remains promising for risk-aware strategies.
+
+### Key Insights from Scenario Analysis:
+- **Base Case** allocations closely align with original Linear Regression results (44.43% returns), confirming strategic consistency.
+- **Expansion scenario** achieved notably higher returns (52.03%), clearly emphasizing the effectiveness of aggressive allocations in strong economic conditions.
+- **Recession scenario** performed well (28.33%), explicitly demonstrating strong defensive capabilities and resilience during economic downturns.
+
+### Strategic Implications:
+- **Dynamic Scenario Toggles**: Explicitly adjust classifications and allocations based on economic assumptions (**interest rates**, **volatility**).
+- **Strategic Reallocation**: Clearly highlights explicit shifts between **growth-oriented**, **value-oriented**, and **income-oriented** strategies depending on scenario.
+- **Enhanced Model Flexibility**: Demonstrates realistic, adaptive stock selection explicitly, enhancing portfolio resilience across market cycles.
 
 ## Limitations and Future Directions
 - **Computational Efficiency**: Bayesian approach requires optimization for real-time use.
 - **Feature Selection**: Expanding and refining financial data features could further enhance model accuracy.
 - **Hybrid Models**: Exploring combinations of these models may yield superior investment strategies.
 
-## Conclusion
-This project demonstrates the significant potential of quantitative strategies for outperforming traditional passive investment benchmarks like the S&P 500. Among the tested models, Linear Regression offered the strongest immediate returns, while Bayesian methods offer promising avenues for future enhancement with their inherent adaptability and uncertainty quantification.
+### Future Scenario Modeling Enhancements:
+- Integration of advanced Bayesian macroeconomic forecasts to explicitly optimize allocations.
+- Real-time adaptive portfolio strategies based on explicit economic indicator forecasting.
 
-This structured, comparative approach provides clear actionable insights for investors, emphasizing how systematic modeling can significantly enhance portfolio performance.
+## Conclusion
+This project demonstrates the significant potential of quantitative strategies to consistently outperform traditional passive benchmarks such as the S&P 500. Initially, Linear Regression emerged as the strongest performer, providing immediate, high-accuracy returns, while Bayesian methods showed promise for future refinement through their adaptability and explicit handling of uncertainty.
+
+The supplemental macroeconomic scenario analysis further enhances these quantitative insights, explicitly demonstrating how portfolio allocations can be dynamically and strategically adjusted to economic conditions. This scenario-based approach not only validates the robustness of the original models but clearly highlights their flexibility and practicality in real-world investing, offering resilience in downturns (Recession scenario) and substantial growth potential in favorable conditions (Expansion scenario).
+
+Overall, this structured, comparative approach provides investors with actionable, robust strategies and highlights the importance of adaptive, economically informed quantitative modeling for maximizing returns and managing risk across diverse market environments.
 
 ## Bayesian Inference Primer
 Bayesian inference models uncertainty explicitly through probability distributions:
@@ -93,7 +146,7 @@ MS Data Science Candidate, Illinois Tech
 
 ## Project Structure
 
-quantitative-stock-models/ ├── cleaned_QuantitativeModels.ipynb # Main notebook with all analysis ├── README.md # Project overview and instructions ├── requirements.txt # Environment dependencies ├── data/ # (Optional) Include small public data or add link └── images/ # Charts and visualizations
+quantitative-stock-models/ ├── cleaned_QuantitativeModels.ipynb # Core analysis: Linear, K-Means, Bayesian models (initial results) ├── dynamic_allocation.ipynb # Supplemental macroeconomic scenario-based portfolio allocation analysis ├── README.md # Project overview, instructions, and results summary ├── requirements.txt # Environment dependencies ├── data/ # Optional data storage or links to external data sources └── images/ # Charts and visualizations
 
 ## Requirements
 
