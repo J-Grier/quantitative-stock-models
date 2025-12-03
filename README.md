@@ -3,13 +3,13 @@
 # Executive Summary
 
 ## Purpose
-Many investors rely on static rules or single-factor screens, making it difficult to outperform broad benchmarks such as the S&P 500. This project evaluates three quantitative approaches to systematic stock selection and portfolio construction: Linear Regression, K-Means clustering, and Bayesian modeling. The goal is to determine which methods achieve consistent outperformance and how portfolio allocations can be further optimized using macroeconomic scenarios.
+Many investors rely on static rules or single-factor screens, making it difficult to outperform broad benchmarks such as the S&P 500. This project began with the goal of comparing three quantitative approaches to systematic stock selection and portfolio construction: Linear Regression, K-Means clustering, and Bayesian modeling. After evaluating these models on out-of-sample 2023 performance, it became clear that strong returns alone were not enough. The next step was to extend the work by developing a macroeconomic scenario framework that adapts allocations to Recession, Base Case, and Expansion environments.
 
 ## Action
-Historical financial data from 2022 was used to engineer features, rank stocks, and group them into Growth, Value, and Income categories. Linear Regression, K-Means clustering, and Bayesian regression were applied to generate predictions and classifications. Portfolios were constructed and tested on 2023 performance. A supplemental macroeconomic scenario analysis introduced allocation shifts for Recession, Base Case, and Expansion environments.
+The project first analyzed financial data from 2022, engineered fundamental features, and ranked stocks using Linear Regression, K-Means clustering, and Bayesian regression. Stocks were grouped into Growth, Value, and Income categories, and portfolios were constructed and tested against 2023 performance. After observing the strengths and weaknesses of each model, a second phase introduced a macroeconomic scenario allocation engine. This system adjusted portfolio weights based on economic strength, risk appetite, sector rotation, and volatility conditions, producing scenario-specific allocations rather than a single static portfolio.
 
 ## Conclusions
-Linear Regression produced the strongest returns at 44.43 percent, significantly outperforming the S&P 500 benchmark of 26.71 percent. K-Means clustering also outperformed with returns of 31.49 percent. Bayesian inference underperformed in this version due to limited tuning but highlighted the potential for uncertainty-aware modeling. Scenario analysis showed substantial improvements in both resilience and return when allocations were adjusted to specific macroeconomic regimes.
+Linear Regression delivered the strongest portfolio return at 44.43 percent, significantly outperforming the S&P 500 benchmark of 26.71 percent. K-Means clustering also outperformed with returns of 31.49 percent. Bayesian inference underperformed in this version but highlighted the potential for uncertainty-aware modeling. The second-phase scenario analysis demonstrated that adaptive allocation provides meaningful improvements: 28.33 percent in the Recession scenario, 44.43 percent in the Base Case, and 52.03 percent in the Expansion scenario. These results show that combining stock-selection models with macro-informed allocation strategies produces both resilience and superior performance.
 
 ## Evidence
 Repository contents:
@@ -17,9 +17,9 @@ Repository contents:
     quantitative-stock-models/
         cleaned_QuantitativeModels.ipynb    Core analysis: Linear, K-Means, Bayesian models
         dynamic_allocation.ipynb            Supplemental macroeconomic scenario-based allocations
-        README.md                           Project description and results summary
+        README.md                           Project overview and results summary
         requirements.txt                    Environment dependencies
-        data/                               Optional data storage or external links
+        data/                               Optional data storage or external sources
         images/                             Charts and visualizations
 
 ---
